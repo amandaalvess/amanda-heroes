@@ -24,31 +24,11 @@ const HEROES: Hero[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
-  selectedHero : Hero;
+  selectedHero : Hero = undefined;
   heroes = HEROES;
+  title = 'Tour of Heroes';
 
   onSelect(hero: Hero) : void {
       this.selectedHero = hero;
   }
 }
-src/app/app.module.ts Código fonte Typescript da aplicação
-
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
